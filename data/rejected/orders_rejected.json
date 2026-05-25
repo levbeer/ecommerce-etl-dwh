@@ -1,0 +1,82 @@
+[
+    {
+        "raw": {
+            "order_id": "5",
+            "customer_id": "104",
+            "status": "paid",
+            "amount": "300.00",
+            "country": "UA"
+        },
+        "error": "duplicate order_id"
+    },
+    {
+        "raw": {
+            "order_id": "",
+            "customer_id": "105",
+            "status": "paid",
+            "amount": "60.00",
+            "country": "PL"
+        },
+        "error": "invalid order_id"
+    },
+    {
+        "raw": {
+            "order_id": "7",
+            "customer_id": "",
+            "status": "paid",
+            "amount": "90.00",
+            "country": "PL"
+        },
+        "error": "invalid customer_id"
+    },
+    {
+        "raw": {
+            "order_id": "8",
+            "customer_id": "106",
+            "status": "unknown",
+            "amount": "40.00",
+            "country": "CZ"
+        },
+        "error": "invalid status"
+    },
+    {
+        "raw": {
+            "order_id": "9",
+            "customer_id": "107",
+            "status": "paid",
+            "amount": "-10.00",
+            "country": "UA"
+        },
+        "error": "negative amount"
+    },
+    {
+        "raw": {
+            "order_id": "10",
+            "customer_id": "108",
+            "status": "paid",
+            "amount": "",
+            "country": "DE"
+        },
+        "error": "invalid amount"
+    },
+    {
+        "raw": {
+            "order_id": "11",
+            "customer_id": "109",
+            "status": "paid",
+            "amount": "abc",
+            "country": "PL"
+        },
+        "error": "invalid amount"
+    },
+    {
+        "raw": {
+            "order_id": "12",
+            "customer_id": "110",
+            "status": "paid",
+            "amount": "500.00",
+            "country": ""
+        },
+        "error": "missing country"
+    }
+]

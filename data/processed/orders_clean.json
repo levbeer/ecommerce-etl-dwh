@@ -1,0 +1,37 @@
+[
+    {
+        "order_id": 1,
+        "customer_id": 101,
+        "status": "paid",
+        "amount": 120.5,
+        "country": "PL"
+    },
+    {
+        "order_id": 2,
+        "customer_id": 102,
+        "status": "cancelled",
+        "amount": 80.0,
+        "country": "UA"
+    },
+    {
+        "order_id": 3,
+        "customer_id": 101,
+        "status": "paid",
+        "amount": 45.0,
+        "country": "PL"
+    },
+    {
+        "order_id": 4,
+        "customer_id": 103,
+        "status": "pending",
+        "amount": 200.0,
+        "country": "DE"
+    },
+    {
+        "order_id": 5,
+        "customer_id": 104,
+        "status": "paid",
+        "amount": 300.0,
+        "country": "UA"
+    }
+]

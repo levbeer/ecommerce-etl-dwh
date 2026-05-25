@@ -1,0 +1,14 @@
+order_id,customer_id,status,amount,country
+1,101,paid,120.50,PL
+2,102,cancelled,80.00,UA
+3,101,PAID,45.00,PL
+4,103,pending,200.00,DE
+5,104,paid ,300.00,UA
+5,104,paid,300.00,UA
+,105,paid,60.00,PL
+7,,paid,90.00,PL
+8,106,unknown,40.00,CZ
+9,107,paid,-10.00,UA
+10,108,paid,,DE
+11,109,paid,abc,PL
+12,110,paid,500.00,
