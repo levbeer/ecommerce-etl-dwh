@@ -1,0 +1,17 @@
+{
+    "total_orders": 5,
+    "paid_orders": 3,
+    "cancelled_orders": 1,
+    "pending_orders": 1,
+    "total_revenue": 465.5,
+    "average_order_value": 155.17,
+    "revenue_by_country": {
+        "PL": 165.5,
+        "UA": 300.0
+    },
+    "orders_by_status": {
+        "paid": 3,
+        "cancelled": 1,
+        "pending": 1
+    }
+}
