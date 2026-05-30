@@ -1,11 +1,18 @@
 import csv
 import json
+import logging
 from pathlib import Path
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 BASE_DIR = Path(__file__).resolve().parent
 RAW_DATA = BASE_DIR / "data" / "raw" / "orders.csv"
 PROCESSED_DATA = BASE_DIR / "data" / "processed" / "orders_clean.json"
 REJECTED_DATA = BASE_DIR / "data" / "rejected" / "orders_rejected.json"
+PROCESSED_DATA.parent.mkdir(parents=True, exist_ok=True)
+REJECTED_DATA.parent.mkdir(parents=True, exist_ok=True)
 
 
 # filtred data
@@ -77,10 +84,12 @@ def clean_orders(orders):
 
 # Open CSV and import to list
 def read_orders_from_csv(path):
+    logging.info("Reading orders from: s%", path)
+
     with open(path, "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         orders = list(reader)
-    print("check source")
+    logging.info("Orders loaded from CSV: %s", len(orders))
     return orders
 
 
@@ -90,13 +99,20 @@ def save_json(path, data):
         json.dump(data, file, indent=4, ensure_ascii=False)
 
 
-order = read_orders_from_csv(RAW_DATA)
-clean_data, rejected_data = clean_orders(order)
+def main():
+    order = read_orders_from_csv(RAW_DATA)
 
-save_json(PROCESSED_DATA, clean_data)
-save_json(REJECTED_DATA, rejected_data)
+    clean_data, rejected_data = clean_orders(order)
+
+    save_json(PROCESSED_DATA, clean_data)
+    save_json(REJECTED_DATA, rejected_data)
+
+    logging.info("Raw rows loaded: %s", len(order))
+    logging.info("Clean rows saved: %s", len(clean_data))
+    logging.info("Rejected rows saved: %s", len(rejected_data))
+    logging.info("Clean data path: %s", PROCESSED_DATA)
+    logging.info("Rejected data path: %s", REJECTED_DATA)
 
 
-print(clean_orders(order))
-print("Clean:", len(clean_data))
-print("Reject:", len(rejected_data))
+if __name__ == "__main__":
+    main()
