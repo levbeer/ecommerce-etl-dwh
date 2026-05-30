@@ -1,5 +1,10 @@
 import json
+import logging
 from pathlib import Path
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -8,6 +13,8 @@ METRICS_DATA = BASE_DIR / "data" / "processed" / "orders_metrics.json"
 
 
 def read_json(path):
+    logging.info("Reading JSON from: %s", path)
+
     with open(path, "r", encoding="utf-8") as file:
         data = json.load(file)
 
@@ -15,8 +22,12 @@ def read_json(path):
 
 
 def save_json(path, data):
+    logging.info("Saving JSON to: %s", path)
+
     with open(path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
+
+    logging.info("JSON saved successfully")
 
 
 def calculate_metrics(orders):
@@ -58,4 +69,4 @@ metrics = calculate_metrics(orders)
 
 save_json(METRICS_DATA, metrics)
 
-print(metrics)
+logging.info("Metrics calculated: %s", metrics)
