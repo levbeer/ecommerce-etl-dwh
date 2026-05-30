@@ -63,10 +63,15 @@ def calculate_metrics(orders):
     }
 
 
-orders = read_json(CLEAN_DATA)
+def main():
+    orders = read_json(CLEAN_DATA)
 
-metrics = calculate_metrics(orders)
+    metrics = calculate_metrics(orders)
 
-save_json(METRICS_DATA, metrics)
+    save_json(METRICS_DATA, metrics)
 
-logging.info("Metrics calculated: %s", metrics)
+    logging.info("Metrics calculated: %s", metrics)
+
+
+if __name__ == "__main__":
+    main()
