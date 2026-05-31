@@ -4,34 +4,44 @@
         "customer_id": 101,
         "status": "paid",
         "amount": 120.5,
-        "country": "PL"
+        "country": "PL",
+        "order_date": "2026-05-01T10:15:00",
+        "updated_at": "2026-05-01T10:20:00"
     },
     {
         "order_id": 2,
         "customer_id": 102,
         "status": "cancelled",
         "amount": 80.0,
-        "country": "UA"
+        "country": "UA",
+        "order_date": "2026-05-01T11:00:00",
+        "updated_at": "2026-05-01T11:10:00"
     },
     {
         "order_id": 3,
         "customer_id": 101,
         "status": "paid",
         "amount": 45.0,
-        "country": "PL"
+        "country": "PL",
+        "order_date": "2026-05-02T09:30:00",
+        "updated_at": "2026-05-02T09:35:00"
     },
     {
         "order_id": 4,
         "customer_id": 103,
         "status": "pending",
         "amount": 200.0,
-        "country": "DE"
+        "country": "DE",
+        "order_date": "2026-05-02T14:00:00",
+        "updated_at": "2026-05-02T14:05:00"
     },
     {
         "order_id": 5,
         "customer_id": 104,
         "status": "paid",
         "amount": 300.0,
-        "country": "UA"
+        "country": "UA",
+        "order_date": "2026-05-03T16:45:00",
+        "updated_at": "2026-05-03T16:50:00"
     }
 ]

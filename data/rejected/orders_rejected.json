@@ -5,7 +5,9 @@
             "customer_id": "104",
             "status": "paid",
             "amount": "300.00",
-            "country": "UA"
+            "country": "UA",
+            "order_date": "2026-05-03T16:45:00",
+            "updated_at": "2026-05-03T16:50:00"
         },
         "error": "duplicate order_id"
     },
@@ -15,7 +17,9 @@
             "customer_id": "105",
             "status": "paid",
             "amount": "60.00",
-            "country": "PL"
+            "country": "PL",
+            "order_date": "2026-05-04T12:00:00",
+            "updated_at": "2026-05-04T12:05:00"
         },
         "error": "invalid order_id"
     },
@@ -25,7 +29,9 @@
             "customer_id": "",
             "status": "paid",
             "amount": "90.00",
-            "country": "PL"
+            "country": "PL",
+            "order_date": "2026-05-04T13:00:00",
+            "updated_at": "2026-05-04T13:05:00"
         },
         "error": "invalid customer_id"
     },
@@ -35,7 +41,9 @@
             "customer_id": "106",
             "status": "unknown",
             "amount": "40.00",
-            "country": "CZ"
+            "country": "CZ",
+            "order_date": "2026-05-05T10:00:00",
+            "updated_at": "2026-05-05T10:05:00"
         },
         "error": "invalid status"
     },
@@ -45,7 +53,9 @@
             "customer_id": "107",
             "status": "paid",
             "amount": "-10.00",
-            "country": "UA"
+            "country": "UA",
+            "order_date": "2026-05-05T11:00:00",
+            "updated_at": "2026-05-05T11:05:00"
         },
         "error": "negative amount"
     },
@@ -55,7 +65,9 @@
             "customer_id": "108",
             "status": "paid",
             "amount": "",
-            "country": "DE"
+            "country": "DE",
+            "order_date": "2026-05-06T15:00:00",
+            "updated_at": "2026-05-06T15:05:00"
         },
         "error": "invalid amount"
     },
@@ -65,7 +77,9 @@
             "customer_id": "109",
             "status": "paid",
             "amount": "abc",
-            "country": "PL"
+            "country": "PL",
+            "order_date": "bad-date",
+            "updated_at": "2026-05-06T16:05:00"
         },
         "error": "invalid amount"
     },
@@ -75,7 +89,9 @@
             "customer_id": "110",
             "status": "paid",
             "amount": "500.00",
-            "country": ""
+            "country": "",
+            "order_date": "2026-05-07T17:00:00",
+            "updated_at": "bad-updated-at"
         },
         "error": "missing country"
     }
