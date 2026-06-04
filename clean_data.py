@@ -114,7 +114,7 @@ def clean_orders(orders):
 
 # Open CSV and import to list
 def read_orders_from_csv(path):
-    logging.info("Reading orders from: s%", path)
+    logging.info("Reading orders from: %s", path)
 
     with open(path, "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
