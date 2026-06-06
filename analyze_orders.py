@@ -33,11 +33,21 @@ def save_json(path, data):
 def calculate_metrics(orders):
     total_order = len(orders)
     total_revenue = 0
+    total_revenue_date = 0
     revenue_by_country = {}
+    revenue_by_date = {}
+    order_by_date = {}
     orders_by_status = {}
     for order in orders:
         status = order["status"]
         orders_by_status[status] = orders_by_status.get(status, 0) + 1
+
+        amount = order["amount"]
+        date = order["order_date"][:10]
+
+        total_revenue_date += amount
+        revenue_by_date[date] = revenue_by_date.get(date, 0) + amount
+        order_by_date[date] = order_by_date.get(date, 0) + 1
 
         if status == "paid":
             amount = order["amount"]
@@ -60,6 +70,8 @@ def calculate_metrics(orders):
         "average_order_value": round(average_order_value, 2),
         "revenue_by_country": revenue_by_country,
         "orders_by_status": orders_by_status,
+        "revenue_by_date": revenue_by_date,
+        "order_by_date": order_by_date,
     }
 
 
